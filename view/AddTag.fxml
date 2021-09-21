@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddTag">
+   <children>
+      <Text layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Tag">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For Photo:" />
+      <Button fx:id="cancelBtn" layoutX="15.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#Cancel" prefHeight="40.0" prefWidth="130.0" text="Cancel" />
+      <Button fx:id="finishBtn" layoutX="15.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#Finish" prefHeight="40.0" prefWidth="130.0" text="Finish" />
+      <ListView fx:id="hasTagListView" layoutX="386.0" layoutY="63.0" prefHeight="275.0" prefWidth="200.0" />
+      <Label fx:id="photoLabel" layoutX="15.0" layoutY="88.0" prefHeight="40.0" prefWidth="130.0" text="Label">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text layoutX="434.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Photo's Tag">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="exitBtn" layoutX="456.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#Exit" prefHeight="40.0" prefWidth="130.0" text="Exit" />
+      <Button fx:id="createTag" layoutX="15.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#CreateTag" prefHeight="40.0" prefWidth="130.0" text="Create Tag" />
+      <Pane fx:id="availableTagPane" layoutX="155.0" layoutY="32.0" prefHeight="306.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="confirmBtn" layoutX="150.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#ConfirmTagSelect" prefHeight="40.0" prefWidth="130.0" text="&gt;&gt;" />
+            <ListView fx:id="tagListView" layoutY="31.0" prefHeight="275.0" prefWidth="200.0" />
+            <Text layoutX="84.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="availableTagPane1" layoutX="155.0" layoutY="32.0" prefHeight="306.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="52.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Tag">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="tagTextField" layoutX="91.0" layoutY="69.0" prefHeight="25.0" prefWidth="95.0" promptText="enter tag..." />
+                  <Text layoutX="29.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag" />
+                  <TextField fx:id="valueTextField" layoutX="91.0" layoutY="112.0" prefHeight="25.0" prefWidth="95.0" promptText="enter value..." />
+                  <Text layoutX="29.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value" />
+                  <Button fx:id="confirmBtn1" layoutX="70.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#ConfirmTagCreation" prefHeight="40.0" prefWidth="130.0" text="Confirm" />
+                  <Button fx:id="confirmBtn1" layoutX="70.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#CancelTagCreation" prefHeight="40.0" prefWidth="130.0" text="Cancel" />
+               </children>
+            </Pane>
+		
+   </children>
+</Pane>
